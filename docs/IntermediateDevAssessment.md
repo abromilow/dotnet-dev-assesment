@@ -36,6 +36,7 @@ Display a list of comments related to the blog post, sourced from the JSON file.
 In the section marked `<!--Blog post comment form-->`, add a comment form that allows users to submit comments, which will be stored against the relevant blog post item in the Blog-Posts.json file.
 
 Form fields:
+
 - Name (required)
 - Email address (required)
 - Comment (required)

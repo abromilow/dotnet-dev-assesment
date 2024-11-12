@@ -31,9 +31,7 @@ namespace DeveloperAssessment.Core.BlogPosts.Repository
                     };
 
                     using FileStream fileStream = File.OpenRead(blogPostsPath);
-                    var test = await JsonSerializer.DeserializeAsync<BlogPostModel>(fileStream, options);
-
-                    return test;
+                    return await JsonSerializer.DeserializeAsync<BlogPostModel>(fileStream, options);
 
                 });
         }

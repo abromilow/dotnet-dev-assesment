@@ -13,6 +13,6 @@ namespace DeveloperAssesment.Core.Caching.Services.Interfaces
             Func<Task<T>> retrieveDataFunc,
             TimeSpan? slidingExpiration = null);
 
-        Task<bool> DeleteCache(string cacheKey);
+        bool DeleteCache(string cacheKey);
     }
 }

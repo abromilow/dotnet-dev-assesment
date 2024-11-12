@@ -35,7 +35,7 @@ namespace DeveloperAssesment.Core.Caching.Services
             return cachedData;
         }
 
-        public bool DeletCache(string cacheKey)
+        public bool DeleteCache(string cacheKey)
         {
             try
             {
