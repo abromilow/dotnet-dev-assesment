@@ -3,4 +3,8 @@
   <PropertyGroup>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DeveloperAssesment.Core\DeveloperAssesment.Core.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,21 +1,26 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using DeveloperAssessment.Web.Models;
+using DeveloperAssessment.Core.BlogPosts.Repository;
 
 namespace DeveloperAssessment.Web.Controllers;
 
 public class HomeController : Controller
 {
+    private const string ViewName = "~/Views/Home/index.cshtml";
     private readonly ILogger<HomeController> _logger;
+    private readonly BlogPostRepository _blogPostRepository;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, BlogPostRepository blogPostRepository)
     {
         _logger = logger;
+        _blogPostRepository = blogPostRepository;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        return View();
+        var currentDirectory = await _blogPostRepository.GetBlogPosts().ConfigureAwait(false);
+        return View(ViewName);
     }
 
     public IActionResult Privacy()
