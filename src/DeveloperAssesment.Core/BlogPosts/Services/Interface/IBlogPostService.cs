@@ -9,9 +9,11 @@ namespace DeveloperAssesment.Core.BlogPosts.Services.Interface
 {
     public interface IBlogPostService
     {
-        Task<BlogPostModel?> GetAllBlogPostsAsync();
+         Task<BlogPostModel?> GetAllBlogPostsAsync();
 
-        Task<BlogPost?> GetBlogPostByIdAsync(int id);
+         Task<BlogPost?> GetBlogPostByIdAsync(int id);
+
+         Task<bool> AddComment(int formId, Comment comment);
 
     }
 }

@@ -35,5 +35,6 @@ namespace DeveloperAssessment.Core.BlogPosts.Repository
 
                 });
         }
+  
     }
 }
